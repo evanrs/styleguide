@@ -54,21 +54,24 @@ a {
     }
 }
 
-input {
+input, textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   display: block;
   max-width: 100%;
-  padding: 0.5em 1em;
   border-radius: 3px;
   border: none;
   background-image: linear-gradient(to bottom, @black0 0%, @black5 25%, @black15 60%, @black25 90%);
 
-  margin-bottom: @base-size;
   font-size: 16px;
   line-height: 24px;
   color: @black75;
+}
+
+input[type="text"] {
+  padding: 0.5em 1em;
+  margin-bottom: @base-size;
 
   &:focus {
     outline: none;
