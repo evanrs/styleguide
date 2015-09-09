@@ -11,7 +11,7 @@
 
 body {
     background-color: @body-background;
-    color: @black0;
+    color: @body-foreground;
     font-family: 'Muli', sans-serif;
     font-weight: 100;
 }
@@ -68,7 +68,12 @@ input, textarea {
   max-width: 100%;
   border-radius: 3px;
   border: none;
-  background-image: linear-gradient(to bottom, @black0 0%, @black5 25%, @black15 60%, @black25 90%);
+  background-color: @input-background-color;
+  background-image: @input-background-image;
+
+  &:focus {
+    background-color: @input-background-color-focus;
+  }
 
   font-size: 16px;
   line-height: 24px;
@@ -81,6 +86,6 @@ input[type="text"] {
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0px 3px fade(@black0,50);
+    box-shadow: 0 0 0px 3px @ui-border;
   }
 }
